@@ -1,6 +1,9 @@
 import { createContext, useEffect, useState } from 'react';
 import { INITIALITEMS } from '../lib/constants';
 
+// Note if anything in a context changes, every component that uses it will rerender
+// So only include what absolutely has to be in the same context
+
 export const ItemsContext = createContext();
 
 export default function ItemsContextProvider({ children }) {
